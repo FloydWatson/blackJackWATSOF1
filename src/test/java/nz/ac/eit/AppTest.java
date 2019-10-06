@@ -50,7 +50,7 @@ public class AppTest
         Game game = new Game();
         player.setHandValue(21);
 
-        System.out.println("Player with score: " + player.getHandValue() + " should not be considered bust. should return true. player is bust?:" + game.checkBust(player));
+        System.out.println("Player with score: " + player.getHandValue() + " should not be considered bust. should return false. player is bust?:" + game.checkBust(player));
     }
 
     @Test
@@ -59,6 +59,6 @@ public class AppTest
         Game game = new Game();
         player.setHandValue(22);
 
-        System.out.println("Player with score: " + player.getHandValue() + " should be considered bust. should return false. player is bust?:" + game.checkBust(player));
+        System.out.println("Player with score: " + player.getHandValue() + " should be considered bust. should return true. player is bust?:" + game.checkBust(player));
     }
 }

@@ -26,6 +26,7 @@ public class App
         System.out.println("Player must try get highest value without going over 21. in case of a draw the Dealer wins");
         System.out.println("player starting score: " + player.getHandValue());
 
+
         while(gameRunning){
             while(playerTurn){
                 System.out.println("would you like to hit or stand");
@@ -78,6 +79,7 @@ public class App
         }
 
     }
+
 
     public static void sleepApp(){
         try
