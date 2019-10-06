@@ -19,7 +19,13 @@ public class Game {
         return player.getHandValue() > maxValue;
     }
 
+    public void setupGame(Player player, Player dealer){
+        for(int i = 0; i < 2; i++){
+            hit(player);
+            hit(dealer);
+        }
 
+    }
 
 
 

@@ -22,7 +22,7 @@ public class App
 
 
         System.out.println("Blackjack Game");
-        setupGame(player, dealer, game);
+        game.setupGame(player, dealer);
         System.out.println("Player must try get highest value without going over 21. in case of a draw the Dealer wins");
         System.out.println("player starting score: " + player.getHandValue());
 
@@ -96,12 +96,6 @@ public class App
         playerTurn = false;
     }
 
-    public static void setupGame(Player player, Player dealer, Game game){
-        for(int i = 0; i < 2; i++){
-            game.hit(player);
-            game.hit(dealer);
-        }
 
-    }
 
 }
