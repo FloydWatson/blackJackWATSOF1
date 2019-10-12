@@ -47,7 +47,7 @@ public class App
                         System.out.println("Player stands on score of: " + player.getHandValue());
                         playerTurn = false;
                         dealerTurn = true;
-
+                        break;
                     default:
                         System.out.println("invalid input. please try again");
                         break;
@@ -66,6 +66,7 @@ public class App
                         System.out.println("Thank you for playing");
                         sleepApp();
                         endGame();
+                        return;
                     }
                     sleepApp();
                 }
