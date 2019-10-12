@@ -38,7 +38,8 @@ public class App
                             System.out.println("congratulations. new score is: "+player.getHandValue());
                         } else {
                             System.out.println("You went bust with a score of : " + player.getHandValue());
-                            System.out.println("House wins. thank you for playing. goodbye");
+                            System.out.println("House wins");
+                            System.out.println("Thank you for playing");
                             endGame();
 
                         }
