@@ -40,7 +40,12 @@ public class AppTest
     @Test
     public void checkDiceRoll() {
         Dice dice = new Dice();
-        System.out.println("Roll should return a number between and including 1 and 6. number returned is: " + dice.getRoll());
+        int diceRoll = dice.getRoll();
+        System.out.println("Roll should return a number between and including 1 and 6. number returned is: " + diceRoll);
+        int high = 6;
+        int low = 1;
+        assertTrue("Error, Dice roll is too high", high >= diceRoll);
+        assertTrue("Error, Dice roll is too low",  low  <= diceRoll);
     }
 
     @Test
@@ -79,6 +84,7 @@ public class AppTest
         player.setHandValue(21);
 
         System.out.println("Player with score: " + player.getHandValue() + " should not be considered bust. should return false. player is bust?:" + game.checkBust(player));
+        assertFalse("Failure - should be false", game.checkBust(player));
     }
 
     @Test
@@ -88,5 +94,6 @@ public class AppTest
         player.setHandValue(22);
 
         System.out.println("Player with score: " + player.getHandValue() + " should be considered bust. should return true. player is bust?:" + game.checkBust(player));
+        assertTrue("Failure - should be true", game.checkBust(player));
     }
 }
