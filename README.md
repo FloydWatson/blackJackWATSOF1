@@ -8,4 +8,4 @@
 ## REQ-7: If the dealers score is less than the players,  the dealer should keep hitting.
 ## REQ-8: If the dealers score goes over the players score and is below 22 then the dealer stands and wins
 ## REQ-9: If the dealer goes over 21 the player wins.
-## REQ-10: If the players or dealers sum goes over 21, its a bust.
+## REQ-10: If the players score goes over 21 its a bust, and the dealer wins.
