@@ -7,11 +7,12 @@ import static org.junit.Assert.*;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class AppTest
 {
     /**
      * Rigorous Test :-)
      */
+
     @Test
     public void shouldAnswerWithTrue()
     {
@@ -28,6 +29,16 @@ public class AppTest
     public void createPlayer() {
         Player player = new Player();
         assertNotNull(player);
+
+    }
+
+    @Test
+    public void setPlayername(){
+        Player player = new Player();
+        player.setUsername("bob");
+        assertNotNull(player.getUsername());
+        System.out.println("player name is: "+ player.getUsername());
+
     }
 
     @Test

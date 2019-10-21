@@ -24,12 +24,15 @@ public class App
         System.out.println("Blackjack Game");
         game.setupGame(player, dealer);
         System.out.println("Player must try get highest value without going over 21. in case of a draw the Dealer wins");
-        System.out.println("player starting score: " + player.getHandValue());
+        System.out.println("Input your name");
+        userInput = sc.nextLine();
+        player.setUsername(userInput);
+        System.out.println(player.getUsername()+" starting score: " + player.getHandValue());
 
 
         while(gameRunning){
             while(playerTurn){
-                System.out.println("would you like to hit or stand");
+                System.out.println("would you like to hit or stand?");
                 userInput = sc.nextLine();
                 switch(userInput){
                     case "hit":
@@ -45,7 +48,7 @@ public class App
                         }
                         break;
                     case "stand":
-                        System.out.println("Player stands on score of: " + player.getHandValue());
+                        System.out.println(player.getUsername()+ " stands on score of: " + player.getHandValue());
                         playerTurn = false;
                         dealerTurn = true;
                         break;
